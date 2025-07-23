@@ -1,0 +1,13 @@
+[Unit]
+Description=URL monitoring service
+After=network.target
+ConditionPathExists=/usr/local/bin/url_checker.sh
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/default/url_checker
+ExecStart=/usr/local/bin/url_checker.sh
+User=root
+
+[Install]
+WantedBy=multi-user.target  

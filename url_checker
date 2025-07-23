@@ -1,0 +1,7 @@
+STATUS_FILE="/tmp/url_checker_stopped"
+
+# URL для проверки доступности
+URL="https://test.com/monitoring/test/api"
+
+# Путь к лог-файлу
+LOG_FILE="/var/log/monitoring.log"
