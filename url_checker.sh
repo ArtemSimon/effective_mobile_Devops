@@ -26,6 +26,13 @@ validate_log_file() {
 # Функция выводит подробную информацию при перезапуске процесса 
 get_process_info() {
     local pid=$1
+
+     # Проверка что процесс существует (в этом нет прям необходимости тк при перезапуске новый pid выдается, но может быть, что внезапно может случится ошибка)
+    if ! ps -p "$pid" >/dev/null 2>&1; then
+        echo "Process $pid does not exist" >> "$LOG_FILE"
+        return 1
+    fi
+
     cat <<EOF >> "$LOG_FILE"
 === Process Details ===
 Name:    $PROCESS_NAME
