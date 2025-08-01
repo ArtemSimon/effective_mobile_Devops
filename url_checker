@@ -1,5 +1,5 @@
-# Файл-флаг для отслеживания остановки(перезапуска)
-STATUS_FILE="/tmp/url_checker_stopped"
+# Название отслеживаемого процесса
+PROCESS_NAME="test"
 
 # URL для проверки доступности
 URL="https://test.com/monitoring/test/api"
