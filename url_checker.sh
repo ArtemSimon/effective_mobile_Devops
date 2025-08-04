@@ -122,5 +122,4 @@ main() {
         sleep 60
     done
 }
-trap "echo '$(date) - Service stopped' >> '$LOG_FILE'; exit 0" SIGTERM SIGINT
 main 
